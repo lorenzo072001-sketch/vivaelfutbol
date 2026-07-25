@@ -41,8 +41,10 @@ jobs:
         working-directory: app
         run: npm run build
 
-      - name: Configura GitHub Pages
+      - name: Configura e attiva GitHub Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Prepara i file da pubblicare
         uses: actions/upload-pages-artifact@v3
